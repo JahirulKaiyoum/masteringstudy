@@ -1,0 +1,41 @@
+
+
+.banner {
+    width: 100%;
+    float: left;
+    background-color: black;
+    color: white;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.banner-container{
+    width:90%;
+    text-align: center;
+    margin:0 auto;
+    text-overflow: none;
+}
+
+.banner-content{
+    width: 80%;
+    margin: 0 auto;
+  
+    
+}
+.heading-one {
+    font-size: 95px;
+}
+.heading-two {
+    font-size: 36px;
+    margin-top: 45px;
+}
+
+@media(min-width:320px) and (max-width:500px){
+    .heading-one {
+        font-size: 40px;
+    }
+    .heading-two {
+        font-size: 23px;
+        margin-top: 30px;
+    }
+
+}
