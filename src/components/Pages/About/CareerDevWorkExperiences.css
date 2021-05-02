@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  /* flex-basis: 100%; */
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.career {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.content-one {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+.content-one h1 {
+  text-align: center;
+}
+.content-two {
+  flex-basis: 50%;
+}
+
+.skill {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.skill-content {
+  display: flex;
+  justify-content: center;
+}
+.content-left {
+  flex-basis: 50%;
+}
+.content-right {
+  flex-basis: 50%;
+  text-align: center;
+}
+.content-right h1 {
+  text-align: center;
+}
+
+.approach {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.approach-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.approach-top {
+  text-align: center;
+  flex-basis: 60%;
+}
+.approach-top h1 {
+  margin-bottom: 30px;
+}
+
+.approach-top p {
+  margin-bottom: 40px;
+}
+.approaches {
+  flex-basis: 20%;
+  flex: 1 1;
+  text-align: center;
+  padding: 20px;
+  border-right: 5px solid;
+}
+
+.internship-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.internship-top {
+  text-align: center;
+  flex-basis: 60%;
+}
+
+.internship-top h1 {
+  margin-bottom: 40px;
+}
+
+.internship {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.companies {
+  padding: 10px;
+  flex: 1 1 10%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .skill {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .skill-content {
+    flex-direction: column;
+    display: flex;
+  }
+  .content-one h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .content-right {
+    order: 1;
+  }
+  .content-right h1 {
+    order: 1;
+  }
+  .content-left {
+    order: 3;
+    padding: 5px 10px;
+  }
+  .company {
+    flex-direction: column;
+  }
+  .career {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}

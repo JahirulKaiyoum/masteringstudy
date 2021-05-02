@@ -1,72 +1,130 @@
+
 * {
-    box-sizing: border-box;
-  }
-
-[class*="col-"]{
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.content-box {
+  width: 80%;
+  text-align: center;
 }
 
-
-.row::after{
-    content: '';
-    clear: both;
-    display: table;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  width: 100%;
 }
-
-header{
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: white;
-    background-color: black;
-    font-size: 50px;
-}
-.section-container {
-    width: 1140px;
-    margin: 0 auto;
-    padding: 60px 0px;
-}
-.heading-three{
-    text-align: center;
-}
-.heading-three h1{
-    font-size: 50px;
-}
-
-.heading-two {
-    text-align: center;
-    padding-bottom: 20px;
-}
-.heading-two h1{
-    font-size: 48px;
-    
+.tuition-provider{
+  padding:50px 0px;
 }
 
 .content-heading{
-    margin-bottom: 20px;
+  padding-top: 30PX;
+  padding-bottom :40px;
 }
 
-.apply-form{
-    text-align: center;
+.tuition-content {
+  flex-basis: 100%;
+  display: flex;
+  margin-top: 10px;
 }
 
-@media screen and (min-width:768px){
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+.tuition-one {
+  flex: 1 1 50%;
+  padding: 15px;
+  margin: auto auto;
+  text-align: left;
+}
+.tuition-two {
+  flex: 1 1 50%;
+  padding: 15px;
+  border-left: 5px solid #000;
+}
+.joining-mastering-study{
+  padding: 75px 0px;
+}
+
+.joining-top {
+  flex-basis: 62%;
+  padding-bottom: 30px;
+}
+
+.mentor-title {
+  
+  flex-basis: 30%;
+  padding: 20px 0px;
+  margin: auto auto;
+  text-align: left;
+  
+}
+
+.mentor-text {
+  /* flex: 1 1 50%; */
+  flex-basis: 70%;
+  text-align:left;
+  padding: 20px 0px;
+}
+.mentor-text ul li{
+  margin: 5px 0px;
+}
+
+.student-title {
+  flex-basis: 30%;
+  padding: 20px 0px;
+  margin: auto auto;
+  text-align: left;
+}
+
+.student-text {
+  flex-basis: 70%;
+  text-align:left;
+  padding: 20px 0px;
+}
+
+.student-text ul li {
+  margin: 15px 0px;
+}
+.training-title {
+  flex-basis: 62%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.training-text{
+  flex-basis:100%;
+}
+.training-text ul li{
+  text-align:left;
+  margin: 15px 0px;
+}
+
+.tuition-provider-title {
+  width: 40%;
+  text-align: center;
+  border-right: 7px solid black;
+  padding: 17px;
+}
+.steps{
+  text-align: justify;
+  padding: 32px 0px;
+}
+.steps p {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .tuition-content {
+    flex-direction: column;
+  }
+  .tuition-one {
+    text-align: left;
+  }
+  .tuition-two {
+    text-align: left;
+  }
+  .tuition-provider-title {
+    width: 100%;
     
-    [class*="col-"] {
-        float: left;
-        padding: 10px;
-        
-      }
-    }
+}
+}

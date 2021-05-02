@@ -1,0 +1,52 @@
+*{
+    padding:0;
+    margin:0;
+    BOX-sizing: border-box;
+}
+
+.row{
+    /* flex-basis: 100%; */
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.career{
+    padding-top: 50px;padding-bottom: 50px;
+
+}
+
+
+.content-one{
+ flex-basis: 50%;
+ text-align: left;
+}
+
+.content-one h1{
+    text-align: center;
+}
+.content-two{
+    flex-basis: 50%;
+}
+
+
+.skill{
+    padding-top: 50px;padding-bottom: 50px;
+    
+}
+.skill-content{
+    display: flex;
+    justify-content: center;
+
+}
+.content-left{
+ flex-basis: 50%;
+ 
+}
+.content-right{
+    flex-basis: 50%;
+    text-align: center;
+}
+.content-right h1{
+    text-align: center;
+}

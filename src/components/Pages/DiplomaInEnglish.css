@@ -1,0 +1,153 @@
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+}
+.course{
+    background:rgb(226, 216, 216);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.overview{
+    width: 100%;
+    padding:80px 0px;
+}
+
+.overview-text{
+    flex-basis: 80%;
+
+}
+.overview-text h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.content-bottom {
+    flex-basis: 80%;
+    display: flex;
+    padding-top: 20px;
+}
+
+.left-content {
+    padding: 10px;
+    text-align: center;
+    border-right: 2px solid black;
+}
+.right-content {
+    padding: 10px;
+    text-align: center;
+    border-left: 2px solid black;
+}
+
+.requirements {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.requirement-content{
+    flex-basis: 80%;
+    display: flex;
+}
+
+.requirements-title {
+    flex-basis: 40%;
+    text-align: center;
+    padding-top: 17px;
+}
+
+
+.requirements-text{
+    flex-basis:60%;
+    text-align:center;
+}
+
+.modules{
+
+    pad: 40px 0px;
+}
+
+
+.module-content {
+    flex-basis: 80%;
+    text-align: center;
+}
+
+.module-content h1  {
+    margin:30px 0px;
+}
+
+.content-box{
+    width: 80%;
+    
+    margin: 0 auto;
+}
+
+.module-title{
+    flex-basis: 40%;
+    padding:30px;
+}
+
+.module-text{
+    flex-basis: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.elective-modules{
+
+    padding: 30px 0px;
+
+}
+
+
+.academic-progression{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content-top {
+    text-align: center;
+    flex-basis: 80%;
+}
+
+
+
+.content-top h1{
+    text-align: center;
+    margin: 45px 0px;
+}
+
+
+
+.content-left {
+    text-align: left;
+    padding: 30px 10px;
+    flex-basis: 50%;
+}
+
+.content-right {
+    text-align: left;
+    padding:30px 10px;
+    flex-basis: 50%;
+}
+
+
+.column-left{
+    flex-basis:50%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.column-right{
+    flex-basis:50%;
+    text-align: center;
+    padding-top: 50px;
+}

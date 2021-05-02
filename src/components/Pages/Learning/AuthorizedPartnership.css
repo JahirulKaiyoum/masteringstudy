@@ -1,0 +1,90 @@
+.authorize-about {
+  width: 100%;
+  padding: 50px 0px;
+}
+.about-content {
+  flex-basis: 100%;
+}
+.about-content h1 {
+  margin-bottom: 40px;
+}
+.benifit-content {
+  flex-basis: 100%;
+  display: flex;
+  padding: 50px;
+}
+.benifit-one {
+  flex-basis: 55%;
+  margin: auto auto;
+}
+.benifit-two {
+  flex-basis: 55%;
+  text-align: center;
+  padding: 10px;
+  border-left: 10px solid black;
+}
+.benifit-two h2 {
+  margin: 15px 0px;
+}
+.partnership {
+  padding: 30px 0px;
+}
+.partnership-content {
+  flex-basis: 100%;
+  display: flex;
+  padding: 50px;
+}
+.partnership-one {
+  flex-basis: 50%;
+  text-align: center;
+  padding: 10px;
+  border-right: 5px solid black;
+}
+
+.partnership-one p {
+  margin-top: 15px;
+}
+.partnership-two {
+  flex-basis: 50%;
+  text-align: center;
+  padding: 10px;
+  border-left: 5px solid black;
+}
+
+.partnership-two p {
+  margin-top: 15px;
+}
+.parenting{
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.parenting-content{
+  text-align: left;
+}
+.parenting-content h1{
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .benifit-content {
+    flex-direction: column;
+  }
+  .benifit-two {
+    border-left: none;
+  }
+  .partnership-content {
+    flex-basis: 100%;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+  }
+
+  .partnership-one {
+    margin: 25px 0;
+    padding: 5px;
+  }
+  .partnership-two {
+    margin: 25px 0;
+    padding: 5px;
+  }
+}

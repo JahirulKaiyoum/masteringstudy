@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.importance{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+.importance-top{
+    flex-basis: 100%;
+}
+
+.importance-content{
+    display: flex;
+    flex-basis: 100%;
+    padding:50px 0px;
+}
+
+.importance-title{
+    flex-basis: 35%;
+    padding:20px 0px;
+    border-right: 4px solid black;
+    margin:auto auto;
+}
+.importance-text{
+    flex-basis: 65%;
+    padding:20px 0px;
+    border-left: 4px solid black;
+    
+    
+}
+
+.topic-title h1{
+    
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+.topic-title{
+    flex-basis: 100%;
+    /* text-align: center; */
+}
+
+.topic-title h1{
+    
+    text-align: center;
+}
+.journey{
+    flex-basis: 100%;
+    padding-top: 42px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.journey h1{
+    margin-bottom: 20px;
+}
+.journey p{
+    text-align: left;
+}
+.University-Progression{
+    flex-basis: 80%;
+    display: flex;
+}
+
+.text-top{
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.text-top h1{
+    margin-bottom: 30px;
+}
+.text-top p{
+    text-align: left;
+
+}
+.content-left{
+    text-align: left;
+    padding: 10px;
+}
+.content-left h3{
+    text-align:center;
+}
+
+.content-right{
+    text-align: left;
+    padding: 10px;
+}
+
+.content-right h3{
+    text-align:center;
+}
+@media screen and (max-width:768px){
+    
+    .importance-content {
+        display: flex;
+        flex-basis: 100%;
+        padding: 50px 0px;
+        flex-direction: column;
+    }
+    }

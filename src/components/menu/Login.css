@@ -1,4 +1,7 @@
-
+/* :root {
+    --primary: #1888ff;
+  } */
+  
   .btn {
     padding: 8px 20px;
     border-radius: 4px;
@@ -34,7 +37,7 @@ body{
   /* justify-content: center;
   align-items: center; */
   /* padding: 10px; */
-  /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+  
 }
 .container{
   max-width: 700px;
@@ -51,6 +54,7 @@ body{
   font-size: 25px;
   font-weight: 500;
   position: relative;
+  color: black;
 }
 .container .title::before{
   content: "";
@@ -76,6 +80,7 @@ form .input-box span.details{
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
+  color: black;
 }
 .user-details .input-box input{
   height: 45px;
@@ -166,4 +171,11 @@ form .user-details .input-box{
   }
 }
 
+.toggle-btn{
+  color: #9b59b6;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+
+}
   

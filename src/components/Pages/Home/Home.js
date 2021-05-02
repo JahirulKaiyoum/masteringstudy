@@ -1,13 +1,23 @@
 import React from 'react';
-import SignIn from '../../menu/SignIn';
-import SignUp from '../../menu/SignUp';
-import Banner from './Banner';
+
+import Banner from './Banner/Banner';
+import PrioritySection from './PrioritySection/PrioritySection';
+import WhyMasteringStudySection from './WhyMasteringStudySection/WhyMasteringStudySection';
+import LearningModelSection from './LearningModelSection/LearningModelSection';
+import CareerSkillSection from './CareerSkillSection/CareerSkillSection';
+import InternshipSection from './InternshipSection/InternshipSection';
+
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Banner></Banner>
-        </div>
+            <PrioritySection></PrioritySection>
+            <WhyMasteringStudySection></WhyMasteringStudySection>
+            <LearningModelSection></LearningModelSection>
+            <CareerSkillSection></CareerSkillSection>
+            <InternshipSection></InternshipSection>
+        </>
     );
 };
 

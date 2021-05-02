@@ -2,22 +2,17 @@
 
 .banner {
     width: 100%;
-    float: left;
     background-color: black;
     color: white;
     padding-top: 130px;
     padding-bottom: 130px;
 }
-.banner-container{
-    width:90%;
-    text-align: center;
-    margin:0 auto;
-    text-overflow: none;
-}
+
 
 .banner-content{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    text-align: center;
   
     
 }
@@ -39,3 +34,22 @@
     }
 
 }
+@media screen and (max-width:768px){
+    .banner {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .banner-content{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      
+        
+    }
+    .heading-one {
+        font-size: 40px;
+    }
+    }

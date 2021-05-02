@@ -1,0 +1,84 @@
+*{
+    padding:0;
+    margin:0;
+    BOX-sizing: border-box;
+}
+.skill-text{
+    padding-top: 20px;
+    padding-bottom: 50px
+}
+
+
+.skill-top{
+    flex-basis: 100%;
+    text-align: left;
+}
+.skill-top h1{
+    text-align: center
+}
+
+.meta-skills{
+
+    padding-bottom: 50px;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+}
+.text-content{
+    flex-basis: 100%;
+    text-align: center;
+
+}
+.metaskill-content{
+    display: flex;
+    padding-top: 10px;
+    padding: bottom 10px;
+    border-top: 1px solid #000;
+    width: 80%;
+    justify-content: between;
+}
+.skill-title{
+    flex-basis: 45%;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+.skill-Characteristics{
+    flex-basis: 55%;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom:20px;
+
+}
+
+@media screen and (max-width:768px){
+    .row{
+        flex-direction: column;
+    }
+    .company{
+        flex-direction: column;
+    }
+    .skill-title{
+        flex-basis: 50%;
+        border-right: 2px solid black;
+    }
+    .skill-Characteristics {
+        flex-basis: 50%;
+        border-left: 2px solid black;
+    }
+        
+    }
+
+    .metaskill-content{
+        display: flex;
+        padding-top: 10px;
+        padding-bottom:  10px;
+        border-top: 1px solid #000;
+        width: 100%;
+        flex-direction: row;
+        
+    }

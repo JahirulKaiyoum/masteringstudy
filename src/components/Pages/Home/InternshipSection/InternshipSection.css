@@ -1,0 +1,26 @@
+
+.internship-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .internship-top {
+    text-align: center;
+    flex-basis: 60%;
+  }
+  
+  .internship-top h1 {
+    margin-bottom: 40px;
+  }
+  
+  .internship {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .companies {
+    padding: 10px;
+    flex: 1 1 10%;
+    text-align: center;
+    margin: auto auto;
+}

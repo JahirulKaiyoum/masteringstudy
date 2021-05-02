@@ -1,0 +1,20 @@
+.details {
+    display: flex;
+    flex-basis: 100%;
+}
+.course-details{
+    flex: 8;
+    text-align: left;
+}
+.enroll{
+    flex:4;
+    text-align: center;
+    margin:auto auto;
+}
+.enroll button {
+    width: 70%;
+
+    height: 68px;
+  
+    font-size: 24px;
+}

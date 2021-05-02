@@ -1,6 +1,6 @@
 .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-    height: 80px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,21 +10,18 @@
   .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
+    
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
   }
   
-  .fa-firstdraft {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-  }
+  
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
+    grid-template-columns: repeat(9, auto);
+    grid-gap: 2px;
     list-style: none;
     text-align: center;
     width: 70vw;
@@ -61,6 +58,17 @@
   .menu-icon {
     display: none;
   }
+  .cart-amount {
+    color: #fff;
+    position: absolute;
+    top: 41px;
+    right: 140px;
+}
+  .cart{
+   width: 25px;
+   position: relative;
+    
+  }
   
   @media screen and (max-width: 960px) {
     .NavbarItems {
@@ -71,7 +79,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 180vh;;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -143,5 +151,11 @@
     button {
       display: none;
     }
+    .cart-amount {
+      color: #fff;
+      position: absolute;
+      top: 519px;
+      right: 225px;
+  }
   }
   

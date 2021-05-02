@@ -1,0 +1,47 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+  .content-box{
+    width: 80%;
+    
+    margin: 0 auto;
+}
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 100%;
+  }
+.cart-one{
+  display: flex;
+   flex-basis: 100%;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+.cart-top{
+  display: flex;
+  padding: 20px 0px;
+}
+.items {
+  flex-basis: 76%;
+  text-align: left;
+}
+.item-price{
+  flex-basis: 24%;
+  text-align: left;
+}
+.cart-item{
+  flex-basis: 80%;
+  padding: 100px 0px;
+  padding-left: 20px;
+}
+.cart-summery{
+  flex-basis: 20%;
+  padding: 120px 0px 115px 0px
+}
