@@ -154,7 +154,7 @@ const CheckoutForm = ({handlePayment}) => {
        setPaymentMethod(payload.paymentMethod);
       
       // console.log(payload.paymentMethod.billing_details, payload.paymentMethod.id, payload.paymentMethod.card);
-      handlePayment(payload.paymentMethod.billing_details, payload.paymentMethod.id, payload.paymentMethod.card);
+      handlePayment(payload.paymentMethod.billing_details, payload.paymentMethod.id);
       setCart([]);
     }
   };

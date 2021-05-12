@@ -5,7 +5,7 @@ import SingleCourse from "../../Courses/SingleCourse";
 import "./DiplomaInEnglish.css";
 
 
-const DipomaInEnglish = () => {
+const DiplomaInEnglish = () => {
   // const { contextCart, setContextCart } = useContext(CartContext);
   const [singleCourse, setSingleCourse] = useState([]);
   const {cart, setCart} = useContext(CartContext);
@@ -450,4 +450,4 @@ const DipomaInEnglish = () => {
   );
 };
 
-export default DipomaInEnglish;
+export default DiplomaInEnglish;

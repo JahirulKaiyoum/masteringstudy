@@ -3,12 +3,13 @@ import { Redirect, Route } from 'react-router';
 import { UserContext } from '../../Context/UserContext';
 
 const PrivateRoute = ({ children, ...rest }) => {
-  const {signedInUser, setSignedInUser }= useContext(UserContext)
+  const { signedInUser, setSignedInUser } = useContext(UserContext)
+  const token = sessionStorage.getItem('userToken');
     return (
         <Route
       {...rest}
       render={({ location }) =>
-      signedInUser.isLoggedIn ? (
+      (signedInUser.isLoggedIn|| token) ? (
           children
         ) : (
           <Redirect

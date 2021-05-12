@@ -10,21 +10,22 @@ const SignUp = () => {
     lastName: "",
     email: "",
     password: "",
-    accountCreated: "",
   });
+  const [newUser, setNewUser] = useState({});
 
   const handleBlur = (e) => {
     let isFormValid = true;
-    
-    if (e.target.name === "email") {
-      console.log(e.target.name,e.target.value);
-      isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
 
+    if (e.target.name === "email") {
+      console.log(e.target.name, e.target.value);
+      isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
     }
     if (e.target.name === "password") {
-      console.log(e.target.name,e.target.value);
+      console.log(e.target.name, e.target.value);
       const isPasswordValid = e.target.value.length >= 8;
-      const isPassword = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(e.target.value);
+      const isPassword = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(
+        e.target.value
+      );
       isFormValid = isPasswordValid && isPassword;
     }
 
@@ -36,8 +37,7 @@ const SignUp = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
-    
+
     fetch("http://localhost:5000/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -45,14 +45,49 @@ const SignUp = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setUser(data);
+        const signInUser = {
+          error: '',
+          success: "",
+        };
         console.log(data);
-        // console.log(data);
-        // alert("Account Created successfully")
-        // history.push("./sign-in")
+        if (data.error) {
+          signInUser.error = true;
+          setNewUser(signInUser);
+          alert(data.error);
+        }
+        if (data.text) {
+          signInUser.success = 'true';
+          signInUser.error = '';
+          setNewUser(signInUser);
+          alert(data.text);
+          history.push("/sign-in");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
-  
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
+  //     const res = await fetch("http://localhost:5000/signup", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(user),
+  //     });
+
+  //     const data = await res.json();
+
+  //     if (data.status === 422 || !data) {
+  //      alert(data.error);
+
+  //       //history.push('/sign-in');
+  //     }
+  //     else {
+
+  //       window.alert('Successfully signed');
+  //       history.push('/sign-in');
+  //     }
+  // }
 
   return (
     <div className="container">
@@ -104,23 +139,24 @@ const SignUp = () => {
           <div className="button">
             <input type="submit" value="Register" />
           </div>
-          {user.accountCreated ? (
+          {newUser.success &&
             <div style={{ textAlign: "center" }}>
               <p style={{ color: "green" }}>
                 Account created successfully, CLick login now.
               </p>
             </div>
-          ) : (
+          }
+          {newUser.error &&
             <div style={{ textAlign: "center" }}>
-              <p style={{ color: "red" }}>{user.text} </p>
+              <p style={{ color: "red" }}>Invalid email and password, Password must contain at least 8 character, 1 small & capital letter and 1 special character.</p>
             </div>
-          )}
+          }
         </form>
         <div></div>
       </div>
-      <div style={{ textAlign: "center", paddingBottom:"15px" }}>
+      <div style={{ textAlign: "center", paddingBottom: "15px" }}>
         <h1>Or</h1>
-        </div>
+      </div>
       <div className="button">
         <button className="login-button">
           <Link to="sign-in" style={{ color: "white" }}>

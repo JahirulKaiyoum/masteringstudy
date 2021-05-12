@@ -13,6 +13,8 @@ const Cart = () => {
     const deleteCourse = (id) => {
         
       const cartItem = cart.filter(item => item.id !== id);
+      
+      
       setCart(cartItem);
       console.log(cartItem);
         //  cart.forEach((course, index) => {

@@ -2,17 +2,20 @@ import React from 'react';
 import { useContext } from 'react/cjs/react.development';
 import { CartContext } from '../../../Context/CartContext';
 import CartSummery from '../Cart/CartItem/CartSummery/CartSummery';
-import { Elements } from '@stripe/react-stripe-js';
+
 import { loadStripe } from '@stripe/stripe-js';
-import {CardElement} from '@stripe/react-stripe-js';
+
 import PaymentForm from './PaymentForm';
 import { UserContext } from '../../../Context/UserContext';
+import { Elements } from '@stripe/react-stripe-js';
 const Payment = () => {
      const {cart,setCart}= useContext(CartContext)
-    const { signedInUser, setSignedInUser } = useContext(UserContext);
+    const { signedInUser,  } = useContext(UserContext);
+    const { email, password } = signedInUser;
+   
 
-    const handlePayment = (userDetails,paymentId,card) => {
-        const orderDetails = { ...signedInUser, Course: cart, orderTime: new Date(), userDetails, paymentId, card };
+    const handlePayment = (userDetails,paymentId) => {
+        const orderDetails = {email,password, orderItems: cart, orderTime: new Date(), userDetails, paymentId };
         console.log(orderDetails);
         fetch("http://localhost:5000/order", {
       method: "POST",
@@ -26,6 +29,7 @@ const Payment = () => {
             }).catch((error) => {
                 console.log(error);
               });
+        
     }
 
     const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');

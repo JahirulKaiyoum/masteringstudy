@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 import "./Login.css";
 
@@ -25,6 +26,7 @@ const Login = () => {
 
   const handleBlur = (e) => {
     let isFormValid = true;
+    
     if (e.target.name === "email") {
       isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
     }
@@ -44,6 +46,7 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log( user.email,user.password);
     e.preventDefault();
     fetch("http://localhost:5000/login", {
       method: "POST",
@@ -52,32 +55,26 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-
-        
-
         if (data.success) {
-           console.log(data);
+          console.log(data);
           console.log(data.token);
           setLoggedInUser(data);
-          sessionStorage.setItem("userToken",data.token)
+
+          sessionStorage.setItem("userToken", data.token);
           setSignedInUser(data);
           alert("Login successful");
           history.replace(from);
-          
-        }
-        else{
+        } else {
           console.log(data.error);
           setError(data.error);
 
           alert("Invalid email or password");
-          
         }
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  
 
   return (
     <div className="container">
@@ -106,7 +103,7 @@ const Login = () => {
               />
             </div>
             {error ? (
-              <div className="text" style={{ textAlign:"center"}}>
+              <div className="text" style={{ textAlign: "center" }}>
                 <p style={{ color: "red" }}>{error}</p>
               </div>
             ) : (
@@ -117,6 +114,9 @@ const Login = () => {
           </div>
           <div className="button">
             <input type="submit" value="Log In" />
+          </div>
+          <div className="">
+            <Link to="/forgot-password">Forgot Password</Link>
           </div>
         </form>
       </div>
